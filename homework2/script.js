@@ -25,20 +25,18 @@ let sum1 = confirm('Пропускати парні числа?')
 if (sum1 == true){
     sum1 = Number(firstNumber)+Number(secondNumber);
     let result = 0;
-    for (let i=2; i<=sum1; i+=2){
+    for (let i=1; i<=sum1; i+=2){
         result +=i;
         console.log('парні числа ' + i)
     }
-    alert ('парні числа ' + result)
-} 
-let sum2 = confirm('Пропускати не парні числа?')
-if (sum2 == true){
-    sum2 = Number(firstNumber)+Number(secondNumber);
+    alert ('Сума не парних чисел становить ' + result)
+} else {
+    sum1 = Number(firstNumber)+Number(secondNumber);
     let result = 0;
-    for (let i=1; i<=sum2; i+=2){
+    for (let i=2; i<=sum1; i+=2){
         result +=i;
         console.log('не парні числа ' + i)
     }
-    alert ('не парні числа ' + result)
+    alert ('Сума парних чисел становить ' + result)
 } 
 
