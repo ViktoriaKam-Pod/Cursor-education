@@ -1,37 +1,44 @@
-let firstNumber = prompt ('Введіть число N');
+let firstNumber;
 
-while (+firstNumber){
-if (!Number.isInteger(+firstNumber)){
-    alert ('Помилка. Ви ввели не ціле число.')
-} break
-}
+while (!Number.isInteger(+firstNumber)||+firstNumber<=0){
+    firstNumber = prompt ("Введіть число N")
+    
+} 
+
 //Парне/не парне
 let evenN = Boolean(+firstNumber%2 === 0);
 
 console.log(+firstNumber)
 console.log('Число N парне?' + ' - ' + evenN)
 
-let secondNumber = prompt ('Введіть число M');
+let secondNumber;
 
-while (+secondNumber){
-    if (!Number.isInteger(+secondNumber)){
-        alert ('Помилка. Ви ввели не ціле число.')
-    } break
+while (!Number.isInteger(+secondNumber)||+firstNumber>+secondNumber){
+    secondNumber = prompt ('Введіть число M (число має бути більше N)');
     }
 //Парне/не парне
 let evenM = Boolean(+secondNumber%2 === 0);
 console.log(+secondNumber)
 console.log('Число M парне?' + ' - ' + evenM)
 
-let sum = Number(firstNumber)+Number(secondNumber);
-let result = 0;
-for (let i=2; i<=sum; i+=2){
-    result +=i;
-    console.log('парні числа ' + i)
-}
-    console.log('сума парних чисел становить ' + result)
-if (!Number.isInteger(sum)){
-    alert ('Помилка. Одне з чисел було не ціле.')
-} else{
-    alert ('Сума парних чисел становить ' + result)
-}
+let sum1 = confirm('Пропускати парні числа?')
+if (sum1 == true){
+    sum1 = Number(firstNumber)+Number(secondNumber);
+    let result = 0;
+    for (let i=2; i<=sum1; i+=2){
+        result +=i;
+        console.log('парні числа ' + i)
+    }
+    alert ('парні числа ' + result)
+} 
+let sum2 = confirm('Пропускати не парні числа?')
+if (sum2 == true){
+    sum2 = Number(firstNumber)+Number(secondNumber);
+    let result = 0;
+    for (let i=1; i<=sum2; i+=2){
+        result +=i;
+        console.log('не парні числа ' + i)
+    }
+    alert ('не парні числа ' + result)
+} 
+
