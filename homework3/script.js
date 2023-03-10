@@ -3,8 +3,8 @@ function changeName(name){
         let newName = name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase();
         return newName
     }
-const userName = changeName('viKToRiIa');
-console.log(userName)
+console.log(changeName('viKToRiIa'));
+
 
   //Функція 2
 function calculaTax (salary){
@@ -13,10 +13,8 @@ function calculaTax (salary){
         let tax = taxPercent1+taxPercent2;
         const fixSalary = salary - tax;
         return fixSalary
-    
     }
-let ourSalary = calculaTax(1000);
-console.log(ourSalary)
+console.log(calculaTax(1000))
 
   //Функція 3
 
@@ -24,16 +22,14 @@ const getRandomNumber = function(a,b){
         const random = Math.round(Math.random() * (b-a)+a);
         return random
     }
-const number = getRandomNumber(1, 10);
-console.log(number)
+console.log(getRandomNumber(1, 10))
 
 //Функція 4
 function deleteLetters(lett, str){
         let letters = str.replaceAll(lett, '');
         return letters
     }
-let text = deleteLetters('a', 'blablabla');
-console.log(text)
+console.log(deleteLetters('a', 'blablabla'))
 
   //Функція 5
 function countLetter(letter,str) {
@@ -61,3 +57,8 @@ function getRandomPassword(number){
         return result;
 }
 console.log(getRandomPassword())
+
+document.writeln(`Функція№1 : ${changeName('viKToRiIa')}; <br\> Функція№2 : ${calculaTax(1000)}; <br\>
+Функція№3 : ${getRandomNumber(1, 10)}; <br\> Функція№4 : ${deleteLetters('a', 'blablabla')};<br\>
+Функція№5 : ${countLetter('а','Асталавіста' )}; <br\> Функція№6 : ${getRandomPassword()}`)
+
