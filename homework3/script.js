@@ -49,3 +49,16 @@ function countLetter(letter,str) {
 console.log(countLetter('а','Асталавіста' ));
 
 //Функція 6
+function getRandomPassword(number){
+    if(!number){
+        number = 8;
+    }
+    let pass = Math.pow(10, number)
+    let password= Math.random();
+    if (password<=0.09)
+        password = password+0.1;
+    console.log(password)
+    let result = Math.round(password*pass);
+        return result;
+}
+console.log(getRandomPassword())
