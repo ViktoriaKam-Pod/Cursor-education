@@ -57,7 +57,6 @@ function getRandomPassword(number){
     let password= Math.random();
     if (password<=0.09)
         password = password+0.1;
-    console.log(password)
     let result = Math.round(password*pass);
         return result;
 }
