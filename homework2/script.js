@@ -29,14 +29,21 @@ if (sum1 == true){
         result +=i;
         console.log('парні числа ' + i)
     }
-    alert ('Сума не парних чисел становить ' + result)
+    alert ('Сума чисел становить ' + result)
+    document.writeln(`Сума чисел становить : ${result} <br\>`)
 } else {
     sum1 = Number(firstNumber)+Number(secondNumber);
     let result = 0;
-    for (let i=2; i<=sum1; i+=2){
+    for (let i=1; i<=sum1; i++){
         result +=i;
-        console.log('не парні числа ' + i)
+        console.log('всі числа ' + i)
     }
-    alert ('Сума парних чисел становить ' + result)
+    alert ('Сума чисел становить ' + result)
+    document.writeln(`Сума чисел становить : ${result} <br\>`)
 } 
+document.writeln(`Пропускати парні числа : ${Boolean(sum1)} <br\>
+Введено число N : ${+firstNumber} <br\>
+Введено число M : ${+secondNumber} <br\>
+`)
+
 
