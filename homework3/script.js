@@ -1,4 +1,4 @@
-//Функція 1
+//Функція 1 яка форматує ім'я, роблячи першу букву великою.
 function changeName(name){
         let newName = name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase();
         return newName
@@ -6,7 +6,7 @@ function changeName(name){
 console.log(changeName('viKToRiIa'));
 
 
-  //Функція 2
+  //Функція 2 яка вираховує суму, що залишається після оплати податку від зарабітньої плати.
 function calculaTax (salary){
         let taxPercent1 = salary * 18 / 100;
         let taxPercent2 = salary * 1.5 / 100;
@@ -16,7 +16,7 @@ function calculaTax (salary){
     }
 console.log(calculaTax(1000))
 
-  //Функція 3
+  //Функція 3 яка повертає випадкове ціле число в діапазоні від а до b.
 
 const getRandomNumber = function(a,b){
         const random = Math.round(Math.random() * (b-a)+a);
@@ -24,14 +24,14 @@ const getRandomNumber = function(a,b){
     }
 console.log(getRandomNumber(1, 10))
 
-//Функція 4
+//Функція 4 функцію, яка видаляє всі букви з речення.
 function deleteLetters(lett, str){
         let letters = str.replaceAll(lett, '');
         return letters
     }
 console.log(deleteLetters('a', 'blablabla'))
 
-  //Функція 5
+  //Функція 5 яка рахує скільки разів певна буква повторюється в слові.
 function countLetter(letter,str) {
     let letterCount = 0;
     for (let lett = 0; lett < str.length; lett++) 
@@ -44,7 +44,9 @@ function countLetter(letter,str) {
 }
 console.log(countLetter('а','Асталавіста' ));
 
-//Функція 6
+/*Функція 6 Створіть функцію генерації випадкового паролю (тільки числа),
+довжина встановлюється користувачем або по замовчуванню = 8 символам.
+*/
 function getRandomPassword(number){
     if(!number){
         number = 8;

@@ -13,7 +13,10 @@ const themes = [
 ];
 const marks = [4,5,5,3,4,5];
 
-//1
+/*1 Розділіть студентів на пари(хлопець + дівчина) для работи над проєктом.
+У вас повинен вийти вкладений масив з парами студентів:
+[["Олександр", "Олена"], [..], [...]];*/
+
 const stud = students.slice(0,1);
 const studSlice = students.slice(1,6);
 const students1 = studSlice.concat(stud);
@@ -29,8 +32,9 @@ function getTeams (stud, tm){
 let res1 = getTeams(students1, 2);
 console.log(res1)
 
-//2
-
+/*2 Зіставте пари з попереднього завдання та теми проєктів, над якими студенти будуть працювати.
+Повинен вийти вкладений масив виду: [["Олександр і Олена", "Теорія автоматів"], [...], [...]]
+*/
 function getItems (team, item){
   let result = [];
   for ( i=0; i<team.length; i++){
@@ -41,8 +45,8 @@ function getItems (team, item){
 let res2 = getItems(res1, themes);
 console.log(res2)
 
-//3
-
+/*3 Зіставте оцінки(marks) зі студентом(students): [["Саша", 4], [...], [...]]
+*/
 function getMarks (tm, mark){
   let result = [];
   for ( i=0; i<tm.length; i++){
@@ -53,8 +57,10 @@ function getMarks (tm, mark){
 const res3 = getMarks(students, marks);
 console.log(res3)
 
-//4
-
+/*4 Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт
+(тут функція буде не чистою, але не повинна мутувати массив):
+[["Олександр і Олена", "Теорія автоматів", 5], [...], [...]]
+*/
 
 function evaluateTheProject (team){
   let result = [];
