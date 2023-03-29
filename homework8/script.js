@@ -32,16 +32,29 @@ class Student  {
     console.log (this.marks)
     }
 }
+
+class BudgetStudent extends Student {
+    constructor (university, fullName, course){
+    super (university, fullName, course);
+    this.budget = "Ви отримали 1400 грн. стипендії"
+    setInterval(()=> this.getScholarship(), 30000)
+    }
+
+    getScholarship(){
+        console.log(this.budget );
+        }
+}
+
+
 let student1 = new Student("Київського національного університету імені Тараса Шевченка", "Тимко Іван Олександрович", "1" );
-let student2 = new Student("Національного авіаційного університету", "Степовий Олег Дмитрович", "2");
-let student3 = new Student("Львівського національного університету імені Івана Франка", "Токар Василь Миколайович", "3")
 student1.getInfo("1. ");
-student2.getInfo("2. ");
-student3.getInfo("3. ");
 student1.changeMark = 3;
 console.log(student1.changeMark)
 student1.getAverageMark();
 student1.dismiss();
 student1.recover();
-student1.changeMark = 4;
-console.log(student1.changeMark);
+let student = new BudgetStudent("Авіаційний університет", "Собко Олег Васильович", "3");
+
+if (student.getAverageMark() >= 4){
+    student.getScholarship()
+}
