@@ -1,0 +1,47 @@
+body{
+    background-color: rgba(15, 15, 61, 0.74);
+}
+#info{
+    font-family: 'Raleway', sans-serif;
+}
+.charapters,
+.planets {
+    width: 40%;
+    height: 150px;
+    border: solid 1px #5e0daa;
+    border-radius: 200px;
+    background-color: #5e0daa7a;
+    margin-left: 30%;
+    margin-bottom: 30px;
+}
+#btn_1, #btn_2{
+    padding-inline: 200px;
+    padding-block: 10px;
+    background-color: rgb(41, 26, 26);
+    color: bisque;
+    margin-bottom: 20px;
+    font-family: 'Tilt Prism', cursive;
+    font-size: 35px;
+    border-radius: 100px 0 100px 0;
+    
+}
+.exit{
+    background-color: rgb(41, 26, 26);
+    color: bisque;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    font-family: 'Tilt Prism', cursive;
+    font-size: 35px;
+    border-radius: 100px 0 100px 0;
+    padding-inline: 20px;
+}
+
+#btn_1:hover, 
+#btn_2:hover,
+.exit:hover{
+    background-color: rgba(163, 163, 11, 0.726);
+    border-style: none;
+}
+h2, p{
+    margin-left: 30%;
+}
