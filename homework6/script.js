@@ -33,7 +33,8 @@ const students = [{
         }
         return sub
         }
-    console.log(getSubjects(students[0]))
+    export let resultWihtSubjects = getSubjects(students[0]);
+    console.log(resultWihtSubjects)
     //2 функція, яка поверне середю оцінку(заокруглену до 2знаків після коми)
     //  по усім предметамдля переданого студента
     function getAverageMark(mark){
@@ -88,7 +89,7 @@ const students = [{
         // повторень.
     function calculateWordLetters(abc){
         let result = {};
-        for (i=0; i< abc.length; i++){
+        for (let i=0; i< abc.length; i++){
             let letter = abc[i].toLowerCase();
             if(result[letter]){
                 result[letter]++

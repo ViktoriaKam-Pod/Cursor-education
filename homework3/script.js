@@ -14,7 +14,8 @@ function calculaTax (salary){
         const fixSalary = salary - tax;
         return fixSalary
     }
-console.log(calculaTax(1000))
+    export let calculate = calculaTax(1000);
+console.log(calculate)
 
   //Функція 3 яка повертає випадкове ціле число в діапазоні від а до b.
 

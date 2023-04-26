@@ -37,7 +37,7 @@ console.log(res1)
 */
 function getItems (team, item){
   let result = [];
-  for ( i=0; i<team.length; i++){
+  for ( let i=0; i<team.length; i++){
     result.push(team[i].concat(item[i]));
   }
   return result
@@ -49,12 +49,12 @@ console.log(res2)
 */
 function getMarks (tm, mark){
   let result = [];
-  for ( i=0; i<tm.length; i++){
-    result[i] = [tm[i] +' -'+ mark[i]];
+  for ( let i=0; i<tm.length; i++){
+    result[i] = [tm[i] +' - '+ mark[i]];
   }
-  return result
+  return result.join("; ")
 }
-const res3 = getMarks(students, marks);
+export const res3 = getMarks(students, marks);
 console.log(res3)
 
 /*4 Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт
@@ -64,7 +64,7 @@ console.log(res3)
 
 function evaluateTheProject (team){
   let result = [];
-  for (i=0; i<team.length; i++){
+  for (let i=0; i<team.length; i++){
     let randomRating = (Math.random()*5).toFixed();
     if (randomRating == 0){
       randomRating +=1;

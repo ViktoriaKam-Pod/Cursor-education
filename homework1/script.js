@@ -1,8 +1,8 @@
 
-let appleCost = 15.678;
-let lemonCost = 123.965;
-let melonCost = 90.2345;
-const maxCost = Math.max(appleCost, lemonCost, melonCost);
+export let appleCost = 15.678;
+export let lemonCost = 123.965;
+export let melonCost = 90.2345;
+export const maxCost = Math.max(appleCost, lemonCost, melonCost);
 const minCost =  Math.min(appleCost, lemonCost, melonCost)
 console.log(minCost)
 console.log(maxCost)
@@ -53,7 +53,7 @@ let cost = (appleCost+lemonCost+melonCost) / 2;
 const profit = cost - discount;
 console.log (profit.toFixed(2))
 
-document.writeln(`Максимальна вартість заокруглена до меншого : ${minCost}
+console.log (`Максимальна вартість заокруглена до меншого : ${minCost}
 Максимальна вартість заокруглена до більшого : ${maxCost}
 Загальна вартість фруктів заокруглена до меншого цілого : ${fruitsCost} 
 Загальна вартість фруктів заокруглена до сотень : ${sumFruits}

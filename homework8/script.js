@@ -7,8 +7,11 @@ class Student  {
         this.course = course;
         this.marks = [5,4,4,5];
     }
-    getInfo(info){
-        console.log(`${info}Студент ${this.course}ого курсу ${this.university}, ${this,this.fullName}`)
+    getInfo(){
+        let inform = `Студент ${this.course}ого курсу ${this.university}, ${this,this.fullName}`
+        console.log(inform)
+        return inform
+        
     }
     set changeMark(value){
             this.marks.push(value);
@@ -46,8 +49,8 @@ class BudgetStudent extends Student {
 }
 
 
-let student1 = new Student("Київського національного університету імені Тараса Шевченка", "Тимко Іван Олександрович", "1" );
-student1.getInfo("1. ");
+export let student1 = new Student("Київського національного університету імені Тараса Шевченка", "Тимко Іван Олександрович", "1" );
+student1.getInfo();
 student1.changeMark = 3;
 console.log(student1.changeMark)
 student1.getAverageMark();

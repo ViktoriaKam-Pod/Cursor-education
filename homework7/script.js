@@ -6,23 +6,29 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 викликатись через call та працювати з даними через this */
 function getMyTaxes(salary){
     let tax = salary*this.tax
-        console.log(tax + " - myTaxes");
+    let result_1 = tax 
+        return result_1
 }
-getMyTaxes.call(ukraine, 2000)
+export let myTax = getMyTaxes.call(ukraine, 2000)
+console.log(myTax + " - myTaxes");
 /* 2  функція, яка рахує скільки у середньому податків платятт IT-спеціалісти у кожній країні. (tax *
 middleSalary). Функція повинна викликатись через call та працювати з даними через this
 */
 function getMiddleTaxes(){
-console.log((this.middleSalary * this.tax) + " - middleTaxes")
+    let result_2=(this.middleSalary * this.tax);
+    return result_2;
 }
-getMiddleTaxes.call(ukraine)
+let middleTaxes = getMiddleTaxes.call(ukraine)
+console.log(middleTaxes + " - middleTaxes")
 /*3 функція, яка  рахує, скільки всього податків платять IT-спеціалісти у кожній країні.
 */
 function getTotalTaxes(){
 let totalTaxes = this.tax*this.middleSalary*this.vacancies;
-console.log(totalTaxes + ' -totalTaxes')
+return totalTaxes 
 }
-getTotalTaxes.call(ukraine)
+let totalTaxes = getTotalTaxes.call(ukraine)
+console.log(totalTaxes + ' -totalTaxes')
+
 /* 4 функція, яка  пише в консоль об'єкт
 виду: { salary: number, taxes: number, profit: number } кожні 10 секунд.
 Значення salary – генеруйте випадковим чином у діапазоні 1500-2000. taxes –

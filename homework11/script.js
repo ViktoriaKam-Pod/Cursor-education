@@ -11,6 +11,6 @@ function getRandomChinese(length){
             },500*i);
             i++
         }
-    }).then((number)=>console.log(number))
+    }).then((number)=> document.querySelector("#div").innerHTML=(number));
 }
-getRandomChinese(4)
+export let randomChinese = getRandomChinese(4)

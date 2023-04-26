@@ -1,4 +1,4 @@
-async function getFilmData() {
+export async function getFilmData() {
     const request = await fetch(`https://swapi.dev/api/films/2/`);
     const response = await request.json();
     rednerFilmData(response)
@@ -33,7 +33,7 @@ function renderCharacter(character){
     })
 }
 
-async function getFilmData_2() {
+ async function getFilmData_2() {
     const request = await fetch(`https://swapi.dev/api/films/2/`);
     const response = await request.json();
     rednerFilmData_2(response)
@@ -49,7 +49,7 @@ function rednerFilmData_2(planet) {
         const response = await request.json();
         renderPlanets(response)
     }
-    function renderPlanets(planets){
+     function renderPlanets(planets){
         const planetsTemplate = `
         <div class="planets">
         <h2>${planets.name}</h2> 

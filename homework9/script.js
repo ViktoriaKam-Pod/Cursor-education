@@ -10,9 +10,11 @@ function generateBlocks(){
   }
 }
 generateBlocks()
+
 function getInterval (){
-  setInterval(()=> generateBlocks(), 1000);
+  let changeBlocks = setInterval(()=> generateBlocks(), 2000);
+  return changeBlocks;
 }
-getInterval ()
+export let blocks = getInterval ();
 
 
